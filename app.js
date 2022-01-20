@@ -7,7 +7,7 @@ function init() {
   
 	const fov = 35;
 	const aspect = container.clientWidth / container.clientHeight;
-	const near = 0.1;
+	const near = 1;
 	const far = 1000;
 
 	camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
@@ -37,7 +37,7 @@ function init() {
   
   function animate(){
 	  requestAnimationFrame( animate );
-	  car.rotation.z -= 0.01;
+	  car.rotation.z -= 0.02;
 	  renderer.render(scene, camera);
   }
   init();
