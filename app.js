@@ -8,10 +8,10 @@ function init() {
 	const fov = 35;
 	const aspect = container.clientWidth / container.clientHeight;
 	const near = 1;
-	const far = 1000;
+	const far = 500;
 
 	camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-	camera.position.set(0, 0, 15);
+	camera.position.set(0, 0, 50);
   
 	const ambient = new THREE.AmbientLight(0x404040, 8);
 	scene.add(ambient);
