@@ -5,7 +5,7 @@ function init() {
   
 	scene = new THREE.Scene();
   
-	const fov = 35;
+	const fov = 55;
 	const aspect = container.clientWidth / container.clientHeight;
 	const near = 1;
 	const far = 2000;
