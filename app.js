@@ -11,7 +11,7 @@ function init() {
 	const far = 1000;
 
 	camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-	camera.position.set(0, 0, 30);
+	camera.position.set(0, 0, 15);
   
 	const ambient = new THREE.AmbientLight(0x404040, 8);
 	scene.add(ambient);
