@@ -18,10 +18,9 @@ function init() {
 	const ambient = new THREE.AmbientLight(0x040404, 11);
 	scene.add(ambient);
   
-	const light = new THREE.DirectionalLight(0x404040, 3);
+	const light = new THREE.DirectionalLight(0x404040, 2);
 	light.position.set(180, 180, 270);
 	scene.add(light);
-	light.castShadow = true
 
 	renderer = new THREE.WebGLRenderer({ antialias: true });
 	renderer.setSize(container.clientWidth, container.clientHeight);
@@ -32,7 +31,8 @@ function init() {
 	controls = new OrbitControls(camera, renderer.domElement);
 	controls.target.set(0, 0, 0);
 	controls.enableDamping = true;
-	controls.enablePan = true;
+	controls.enablePan = false;
+	controls.maxPolarAngle = Math.PI / 2;
 
 	let loader = new THREE.GLTFLoader();
 	loader.load("./3d/scene.glb", function(gltf) {
