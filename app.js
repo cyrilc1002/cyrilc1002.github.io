@@ -45,7 +45,7 @@ function init() {
   function animate(){
 	controls.update();
 	requestAnimationFrame( animate );
-	car.rotation.z -= 0.001;
+	car.rotation.z -= 0.0003;
 	renderer.render(scene, camera);
   }
   init();
