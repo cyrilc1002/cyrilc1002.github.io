@@ -35,7 +35,7 @@ function init() {
 	controls.enablePan = true;
 
 	let loader = new THREE.GLTFLoader();
-	loader.load("./3d/scene.glb", function(gltf) {
+	loader.load("./3d/scene1.glb", function(gltf) {
 	  scene.add(gltf.scene);
 	  car = gltf.scene.children[0];
 	  animate();
